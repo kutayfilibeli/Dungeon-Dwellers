@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Breakable
   - Pickups
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
@@ -23,9 +24,9 @@ TagManager:
   - Box
   - Pickups
   - Level Object Spike
-  - 
-  - 
-  - 
+  - Level
+  - IgnoreBullets
+  - Effects
   - 
   - 
   - 
@@ -43,6 +44,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Level
+    uniqueID: 2488086565
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

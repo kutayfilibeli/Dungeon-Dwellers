@@ -19,43 +19,53 @@ public class Breakables : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
+    public void Break() 
+    {
+        Destroy(gameObject);
+
+        AudioManager.instance.playSFX(0);
+
+        int piecesToDrop = Random.Range(1, maxPieces);
+
+        for (int i = 0; i < piecesToDrop; i++)
+        {
+
+            int randomPiece = Random.Range(0, brokenPieces.Length);
+
+            Instantiate(brokenPieces[randomPiece], transform.position, transform.rotation);
+
+
+        }
+
+
+        if (shouldDropItem)
+        {
+            float dropRate = Random.Range(0f, 100f);
+
+            if (dropRate < itemDropRate)
+            {
+                int randomItem = Random.Range(0, itemsToDrop.Length);
+
+                Instantiate(itemsToDrop[randomItem], transform.position, transform.rotation);
+            }
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             if(PlayerController.instance.dashCounter > 0)
             {
-                Destroy(gameObject);
-
-                int piecesToDrop = Random.Range(1, maxPieces);
-
-                for (int i = 0; i < piecesToDrop; i++) 
-                { 
-                
-                    int randomPiece = Random.Range(0, brokenPieces.Length);
-
-                    Instantiate(brokenPieces[randomPiece], transform.position, transform.rotation);
-                }
-
-
-                if (shouldDropItem)
-                {
-                    float dropRate = Random.Range(0f, 100f);
-
-                    if(dropRate < itemDropRate)
-                    {
-                        int randomItem = Random.Range(0, itemsToDrop.Length);
-
-                        Instantiate(itemsToDrop[randomItem], transform.position, transform.rotation);
-                    }
-                }
-        
-            
+                Break();                
             }
-            
+          
+        }
+        if (other.tag == "PlayerBullet")
+        {
+            Break();
         }
     }
 }

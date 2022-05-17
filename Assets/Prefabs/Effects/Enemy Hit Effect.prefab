@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3947647088565674354}
   - component: {fileID: 3947647088565674355}
   - component: {fileID: 3947647088565674352}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Enemy Hit Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

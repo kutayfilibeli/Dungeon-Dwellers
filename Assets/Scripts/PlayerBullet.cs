@@ -32,6 +32,8 @@ public class PlayerBullet : MonoBehaviour
         
         Destroy(gameObject);
 
+        AudioManager.instance.playSFX(4);
+
         if (other.tag == "Enemy")
         {
             other.GetComponent<EnemyController>().DamageEnemy(PistolDamage);

@@ -37,6 +37,8 @@ public class EnemyBullet : MonoBehaviour
         }
 
         Destroy(gameObject);
+
+        AudioManager.instance.playSFX(4);
     }
 
  
