@@ -76,7 +76,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyRB: {fileID: 3352919329205438699}
   movementSpeed: 3
+  shouldChasePlayer: 1
   playerChaseRange: 7
+  shouldWander: 0
+  wanderLength: 0
+  pauseLength: 0
+  shouldPatrol: 0
+  patrolPoints: []
+  shouldRunAway: 0
+  runAwayRange: 0
+  canShoot: 1
+  bullet: {fileID: 3590091062336265031, guid: e8a00a86fe2b57f4cad5afeee66f645b, type: 3}
+  firingPoint: {fileID: 8391174033052710701}
+  rateofFire: 1
+  shootrange: 10
+  body: {fileID: 3352919330029035934}
   animator: {fileID: 3352919330029035933}
   health: 150
   SplatterEffects:
@@ -85,12 +99,10 @@ MonoBehaviour:
   - {fileID: 9054740147637267880, guid: 676fe5e9449e9db4188321ca7e8a95e9, type: 3}
   - {fileID: 3706541085317248083, guid: 70de5a99eab5aa047a02be0b045d610a, type: 3}
   HitEffect: {fileID: 3947647088565674353, guid: ca4d01ef255928644b54d216594a0006, type: 3}
-  canShoot: 1
-  bullet: {fileID: 3590091062336265031, guid: e8a00a86fe2b57f4cad5afeee66f645b, type: 3}
-  firingPoint: {fileID: 8391174033052710701}
-  rateofFire: 1
-  shootrange: 10
-  body: {fileID: 3352919330029035934}
+  shouldDropItem: 1
+  itemsToDrop:
+  - {fileID: 8157633546951805579, guid: f3409215e2ef05d4599966c549bd9f3a, type: 3}
+  itemDropRate: 30
 --- !u!114 &3979028304176396334
 MonoBehaviour:
   m_ObjectHideFlags: 0

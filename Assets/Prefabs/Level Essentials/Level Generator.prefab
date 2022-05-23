@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4667145075939084734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4667145075939084735}
+  m_Layer: 0
+  m_Name: Generation Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4667145075939084735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4667145075939084734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4667145076415992453}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4667145076415992455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4667145076415992453}
+  - component: {fileID: 4667145076415992452}
+  m_Layer: 0
+  m_Name: Level Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4667145076415992453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4667145076415992455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4667145075939084735}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4667145076415992452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4667145076415992455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f095d44bc3f0a6479b0af99e22aae2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layoutRoom: {fileID: 3324660812020933665, guid: 64a2ccc90e597da4088aa62c939049a1, type: 3}
+  distanceToEnd: 10
+  startColor: {r: 0, g: 0.4986515, b: 1, a: 1}
+  endColor: {r: 1, g: 0, b: 0, a: 1}
+  generatorPoint: {fileID: 4667145075939084735}
+  selectedDirection: 1
+  xOffset: 18
+  yOffset: 10
+  roomLayer:
+    serializedVersion: 2
+    m_Bits: 65536
+  rooms:
+    singleUp: {fileID: 8052172643150747563, guid: 5b60f39f451895747a2fab1dbff05e73, type: 3}
+    singleDown: {fileID: 1454707726688455273, guid: 614e631a05d1e904f939a906404f7a4f, type: 3}
+    singleRight: {fileID: 5872027563201884695, guid: ca4fb5c31367b704c8424fc79528ff71, type: 3}
+    singleLeft: {fileID: 717092976080445974, guid: ef73edb731c0c8a42bed6276aa8ca16b, type: 3}
+    doubleUpDown: {fileID: 5646482877971219340, guid: 3258dfb28d48eab4480440ac3b2ae11c, type: 3}
+    doubleLeftRight: {fileID: 4464754252425833856, guid: 788e261e5057ef54389303c22c4f6ae5, type: 3}
+    doubleUpRight: {fileID: 7057591880564295503, guid: d8125bfbe10dceb49b78b1bb0450832e, type: 3}
+    doubleDownRight: {fileID: 4059545966028223019, guid: 2a204886e89752f42ba53e69399017cb, type: 3}
+    doubleDownLeft: {fileID: 7102553412872395638, guid: 2f164b2f79eb6a649a7d3e2dc480bae3, type: 3}
+    doubleUpLeft: {fileID: 2442265090115953823, guid: be932fa4595ca474aa68462dcc3ceca6, type: 3}
+    tripleUpRightDown: {fileID: 663152843303416069, guid: cf78b102db11d664e9ddaf4b0fe9c83d, type: 3}
+    tripleRightDownLeft: {fileID: 2841521479161781230, guid: 7bdee70ac71c9354d9564ec67c65196b, type: 3}
+    tripleDownLeftUp: {fileID: 2380163893110813479, guid: b1262140e0a770a4db486ceed9408774, type: 3}
+    tripleLeftUpRight: {fileID: 3858598233556314741, guid: 587f68d137761074ba37cdb8c236c7d4, type: 3}
+    quadrupleDoorRoom: {fileID: 5321420274395475723, guid: 5249561bc6cc7d0429ca0481943efc81, type: 3}
+  startFloor: {fileID: 7033890385085331338, guid: 9431a9f56c2c83142bb55904729db52e, type: 3}
+  endFloor: {fileID: 1082482073844826725, guid: cfc432b4a82868d4aa9663f547e2e3ba, type: 3}
+  potentialFloors:
+  - {fileID: 4776136472725277073, guid: be9e38ac64e476245b0a984af7dca549, type: 3}
+  - {fileID: 7033890385085331338, guid: 9431a9f56c2c83142bb55904729db52e, type: 3}

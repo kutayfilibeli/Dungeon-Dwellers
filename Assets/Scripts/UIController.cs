@@ -9,7 +9,7 @@ public class UIController : MonoBehaviour
     public static UIController instance;
 
     public Slider healthSlider;
-    public Text healthText;
+    public Text healthText, coinText;
 
     public GameObject DeathScreen;
 
@@ -19,7 +19,7 @@ public class UIController : MonoBehaviour
 
     public string newGameScene, mainMenuScene;
 
-    public GameObject pauseMenu;
+    public GameObject pauseMenu, mapDisplay, bigMapText;
 
     private void Awake()
     {
