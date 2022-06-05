@@ -76,8 +76,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layoutRoom: {fileID: 3324660812020933665, guid: 64a2ccc90e597da4088aa62c939049a1, type: 3}
   distanceToEnd: 10
+  includeShop: 0
+  minDistanceToShop: 0
+  maxDistanceToShop: 0
   startColor: {r: 0, g: 0.4986515, b: 1, a: 1}
   endColor: {r: 1, g: 0, b: 0, a: 1}
+  shopColor: {r: 0, g: 0, b: 0, a: 0}
   generatorPoint: {fileID: 4667145075939084735}
   selectedDirection: 1
   xOffset: 18
@@ -103,6 +107,20 @@ MonoBehaviour:
     quadrupleDoorRoom: {fileID: 5321420274395475723, guid: 5249561bc6cc7d0429ca0481943efc81, type: 3}
   startFloor: {fileID: 7033890385085331338, guid: 9431a9f56c2c83142bb55904729db52e, type: 3}
   endFloor: {fileID: 1082482073844826725, guid: cfc432b4a82868d4aa9663f547e2e3ba, type: 3}
+  shopFloor: {fileID: 5271294917528155517, guid: 61131970a359e5347816d648a3b216fb, type: 3}
   potentialFloors:
   - {fileID: 4776136472725277073, guid: be9e38ac64e476245b0a984af7dca549, type: 3}
-  - {fileID: 7033890385085331338, guid: 9431a9f56c2c83142bb55904729db52e, type: 3}
+  - {fileID: 9066747486156112047, guid: 77b41cd6dd8911b43ae43f1932a475f2, type: 3}
+  - {fileID: 5226441669877510118, guid: 2bfe6580e886034418dd4d3842f58be1, type: 3}
+  - {fileID: 8164889904400135637, guid: 7eaf589a212255a45b4ed5d6ca56c685, type: 3}
+  - {fileID: 8873244217731849071, guid: 7b858470f96782242ab31ed580dce01c, type: 3}
+  - {fileID: 1179903180834029907, guid: 233f948508d1630409c393166f34c86a, type: 3}
+  - {fileID: 5894796105390673252, guid: 48e4c11286f792d40b6fc77d6b14903f, type: 3}
+  - {fileID: 6755482954941398295, guid: f835f8c18f69c354e9817b828e099e39, type: 3}
+  - {fileID: 2933244871046238633, guid: ecdfb9e8c8b81ba409ed3d68c723c827, type: 3}
+  - {fileID: 7831624381372679685, guid: e8e5271e6b2d1b14a9c244729be796d0, type: 3}
+  - {fileID: 8759961018755241509, guid: 799ea906ec9ee66439b1af36e04898a0, type: 3}
+  - {fileID: 7727683812423695054, guid: 271f6813e89348a47b0c244f42e3652f, type: 3}
+  - {fileID: 5060144899745372745, guid: 89c6ad6f40343ef4296dc87eb1e32397, type: 3}
+  - {fileID: 2393300583122342688, guid: ba5c669f3a232c547ab5198c40f1e791, type: 3}
+  - {fileID: 8322039871320946979, guid: ebd48d8f96773fd4facfa05af38c8b17, type: 3}
