@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class ShopItem : MonoBehaviour
 {
     public GameObject buyText;
@@ -13,10 +13,23 @@ public class ShopItem : MonoBehaviour
     public int itemCost;
 
     public int healthUpgradeAmount;
+
+    public Guns[] potentialGuns;
+    private Guns gun;
+    public SpriteRenderer gunSprite;
+    public Text infoText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (isWeapon)
+        {
+            int selectedGun = Random.Range(0, potentialGuns.Length);
+            gun = potentialGuns[selectedGun];
+
+            gunSprite.sprite = gun.gunShopSprite;
+            infoText.text = gun.weaponName + "\n - " + gun.itemCost + " Gold - ";
+            itemCost = gun.itemCost;
+        }
     }
 
     // Update is called once per frame
@@ -38,7 +51,19 @@ public class ShopItem : MonoBehaviour
                     if (isHealthUpgrade)
                     {
                         PlayerHealthController.instance.IncreaseMaxHealth(healthUpgradeAmount);                      
-                    }                    
+                    }
+                    if (isWeapon)
+                    {
+                        Guns gunClone = Instantiate(gun);
+                        gunClone.transform.parent = PlayerController.instance.gunArm;
+                        gunClone.transform.position = PlayerController.instance.gunArm.position;
+                        gunClone.transform.localRotation = Quaternion.Euler(Vector3.zero);
+                        gunClone.transform.localScale = Vector3.one;
+
+                        PlayerController.instance.usableGuns.Add(gunClone);
+                        PlayerController.instance.currentGun = PlayerController.instance.usableGuns.Count - 1;
+                        PlayerController.instance.GunSwitch();
+                    }
                     gameObject.SetActive(false);
                     inBuyZone = false;
                     AudioManager.instance.playSFX(17);
