@@ -57,8 +57,10 @@ public class LevelManager : MonoBehaviour
         Tracker.instance.currentHealth = PlayerHealthController.instance.currentHealth;
         Tracker.instance.maxHealth = PlayerHealthController.instance.maxHealth;
 
+       
         SceneManager.LoadScene(nextLevel);
 
+        
 
     }
 
