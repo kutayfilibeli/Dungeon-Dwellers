@@ -21,6 +21,8 @@ public class UIController : MonoBehaviour
 
     public GameObject pauseMenu, mapDisplay, bigMapText;
 
+    public Image currentGun;
+    public Text gunNameText;
     private void Awake()
     {
         instance = this;
@@ -30,6 +32,9 @@ public class UIController : MonoBehaviour
     {
         fadeOutBlack = true;
         fadeToBlack = false;
+
+        currentGun.sprite = PlayerController.instance.usableGuns[PlayerController.instance.currentGun].gunUI;
+        gunNameText.text = PlayerController.instance.usableGuns[PlayerController.instance.currentGun].weaponName;
     }
 
     // Update is called once per frame
@@ -62,7 +67,7 @@ public class UIController : MonoBehaviour
 
     public void NewGame()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 2f;
         SceneManager.LoadScene(newGameScene);
     }
     public void ReturnToMainMenu()

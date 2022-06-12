@@ -13,6 +13,9 @@ public class LevelManager : MonoBehaviour
     public bool isPaused;
 
     public int currentCoins;
+
+    public Transform spawnPoint;
+
     private void Awake()
     {
         instance = this;
@@ -20,9 +23,15 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerController.instance.transform.position = spawnPoint.position;
+        PlayerController.instance.canMove = true;   
+        currentCoins = Tracker.instance.currentCoins;
+
         Time.timeScale=1f;
 
         UIController.instance.coinText.text = currentCoins.ToString();
+
+        
     }
 
     // Update is called once per frame
@@ -43,6 +52,10 @@ public class LevelManager : MonoBehaviour
         UIController.instance.StartFadeToBlack();
 
         yield return new WaitForSeconds(waitToLoad);
+
+        Tracker.instance.currentCoins = currentCoins;
+        Tracker.instance.currentHealth = PlayerHealthController.instance.currentHealth;
+        Tracker.instance.maxHealth = PlayerHealthController.instance.maxHealth;
 
         SceneManager.LoadScene(nextLevel);
 

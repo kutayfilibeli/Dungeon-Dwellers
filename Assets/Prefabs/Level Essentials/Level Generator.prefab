@@ -76,12 +76,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layoutRoom: {fileID: 3324660812020933665, guid: 64a2ccc90e597da4088aa62c939049a1, type: 3}
   distanceToEnd: 10
-  includeShop: 0
-  minDistanceToShop: 0
-  maxDistanceToShop: 0
+  includeShop: 1
+  includeTreasureRoom: 1
+  minDistanceToShop: 4
+  maxDistanceToShop: 8
+  minDistanceToTreasureRoom: 5
+  maxDistanceToTreasureRoom: 8
   startColor: {r: 0, g: 0.4986515, b: 1, a: 1}
   endColor: {r: 1, g: 0, b: 0, a: 1}
-  shopColor: {r: 0, g: 0, b: 0, a: 0}
+  shopColor: {r: 1, g: 0.8333594, b: 0.21226418, a: 1}
+  treasureColor: {r: 0.68699807, g: 0, b: 0.735849, a: 1}
   generatorPoint: {fileID: 4667145075939084735}
   selectedDirection: 1
   xOffset: 18
@@ -108,6 +112,7 @@ MonoBehaviour:
   startFloor: {fileID: 7033890385085331338, guid: 9431a9f56c2c83142bb55904729db52e, type: 3}
   endFloor: {fileID: 1082482073844826725, guid: cfc432b4a82868d4aa9663f547e2e3ba, type: 3}
   shopFloor: {fileID: 5271294917528155517, guid: 61131970a359e5347816d648a3b216fb, type: 3}
+  treasureFloor: {fileID: 4536480895895566738, guid: 12c3e5378892d8b4a817b88884fddf9d, type: 3}
   potentialFloors:
   - {fileID: 4776136472725277073, guid: be9e38ac64e476245b0a984af7dca549, type: 3}
   - {fileID: 9066747486156112047, guid: 77b41cd6dd8911b43ae43f1932a475f2, type: 3}
